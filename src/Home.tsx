@@ -102,6 +102,8 @@ const Home = (props: HomeProps) => {
             connection
           );
           console.log("Candy machine state: ", cndy);
+          console.log("Candy machine mint: ", cndy.state.tokenMint?.toString());
+          console.log("Candy machine treasury: ", cndy.state.treasury.toString());
           let active = cndy?.state.goLiveDate
             ? cndy?.state.goLiveDate.toNumber() < new Date().getTime() / 1000
             : false;
